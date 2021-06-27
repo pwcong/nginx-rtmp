@@ -36,7 +36,7 @@ docker run -it -p 1935:1935 -p 8080:80 --rm nginx-rtmp
 - Stream live content to:
 
 ```
-rtmp://localhost:1935/stream/$STREAM_NAME
+rtmp://localhost:1935/live/$STREAM_NAME
 ```
 
 ### SSL
@@ -69,7 +69,7 @@ volumes:
 ### OBS Configuration
 
 - Stream Type: `Custom Streaming Server`
-- URL: `rtmp://localhost:1935/stream`
+- URL: `rtmp://localhost:1935/live`
 - Stream Key: `hello`
 
 ### Watch Stream
@@ -88,7 +88,7 @@ http://localhost:8080/live/$STREAM_NAME.m3u8
 
 - Example Playlist: `http://localhost:8080/live/hello.m3u8`
 - [HLS.js Player](https://hls-js.netlify.app/demo/?src=http%3A%2F%2Flocalhost%3A8080%2Flive%2Fhello.m3u8)
-- FFplay: `ffplay -fflags nobuffer rtmp://localhost:1935/stream/hello`
+- FFplay: `ffplay -fflags nobuffer rtmp://localhost:1935/live/hello`
 
 ## Resources
 
