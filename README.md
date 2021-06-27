@@ -74,10 +74,16 @@ volumes:
 
 ### Watch Stream
 
-- Load up the example hls.js player in your browser:
+- Load up the example HLS player in your browser:
 
 ```
-http://localhost:8080/player.html?url=http://localhost:8080/live/hello.m3u8
+http://localhost:8080/player_hls.html?url=http://localhost:8080/live/hello.m3u8
+```
+
+- Load up the example DASH player in your browser:
+
+```
+http://localhost:8080/player_dash.html?url=http://localhost:8080/dash/hello.mpd
 ```
 
 - Or in Safari, VLC or any HLS player, open:
